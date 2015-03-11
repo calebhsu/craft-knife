@@ -1,0 +1,22 @@
+{
+  "name": "craft-knife",
+  "version": "1.0.0",
+  "description": "Parameterized Knife Model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calebhsu/craft-knife.git"
+  },
+  "keywords": [
+    "craftml"
+  ],
+  "author": "Caleb Hsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebhsu/craft-knife/issues"
+  },
+  "homepage": "https://github.com/calebhsu/craft-knife"
+}
