@@ -1,71 +1,69 @@
 <craft>
     <parameter name="size" type="int" default="1"/>
     <parameter name="length" type="int" default="30"/>
+    
+    <!-- Handle -->
     <script type="text/openjscad">
-
         function main() {
             var size = params.size;
             var length = params.length;
             
+            var h;
+            
             // handles minimum length
             if (length < 15) { length = 15; }
             
-            // assembled knife
-            return union(
-                blade(),
-                handle()
-            ).scale(size);
-            
-            // knife components
-            function blade() {
-                var head, diff, flatten;
-                
-                // parts
-                head = sphere(5).scale([1, 3, 0.2]);
-                
-                diff = cube({
-                    size: [10, 30, 5], 
-                    center: true
-                });
-                
-                flatten = cube({
-                    size: [10, 30, 3],
-                    center: true
-                });
-                
-                // transformations
-                diff = diff.translate([6, 0, 0]);
-                
-                head = difference(
-                    head, 
-                    diff, 
-                    flatten.translate([0, 0, 2]),
-                    flatten.translate([0, 0, -2])
-                );
-                
-                head = head.translate([0, 0, 3]);
-                
-                return head;
-            }
-            
-            function handle() {
-                var h;
-                 
-                // parts
-                h = cylinder({
-                    r1: 1,
-                    r2: 2,
-                    h: length,
-                    fn: 6
-                }).scale([1, 0.4, 1]);
-                 
-                // handle positioning
-                h = h.rotateX(90);
-                h = h.translate([0, -12, 3]);
+            // parts
+            h = cylinder({
+                r1: 1,
+                r2: 2,
+                h: length,
+                fn: 6
+            }).scale([1, 0.4, 1]);
+             
+            // handle positioning
+            h = h.rotateX(90);
+            h = h.translate([0, -12, 3]);
 
-                return h;
-            }
+            return h.scale(size);
         }
-
     </script>
+    
+    <!-- Blade -->
+    <script type="text/openjscad">
+        function main() {
+            var size = params.size;
+
+            var head, diff, flatten;
+            
+            // parts
+            head = sphere(5).scale([1, 3, 0.2]);
+            
+            diff = cube({
+                size: [10, 30, 5], 
+                center: true
+            });
+            
+            flatten = cube({
+                size: [10, 30, 3],
+                center: true
+            });
+            
+            // transformations
+            diff = diff.translate([6, 0, 0]);
+            
+            head = difference(
+                head, 
+                diff, 
+                flatten.translate([0, 0, 2]),
+                flatten.translate([0, 0, -2])
+            );
+            
+            head = head.translate([0, 0, 3]);
+            
+            return head.scale(size);
+            
+        }
+    </script>
+    
 </craft>
