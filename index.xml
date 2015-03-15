@@ -62,7 +62,6 @@
             head = head.translate([0, 0, 3]);
             
             return head.scale(size);
-            
         }
     </script>
     
