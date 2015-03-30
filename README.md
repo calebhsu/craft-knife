@@ -3,21 +3,22 @@
 Parameterized knife model.
 
 ### Install
-	$ npm install craft-knife
+    $ npm install craft-knife
 
 ### Parameters
-- size: scales model
 - length: adjusts length of knife
 
 ### Example
 ```html
 <craft>
-	<craft name="knife" module="craft-knife"/>
-	<lineup spacing = "2">
-		<knife length="15" size="2"></knife>
-		<knife length="20"></knife>
-		<knife></knife>
-	</lineup>
+    <craft name="knife" module="calebhsu/craft-knife"/>
+    <lineup spacing = "2">
+        <scale factor="2">
+            <knife length="15"></knife>
+        </scale>
+        <knife length="20"></knife>
+        <knife></knife>
+    </lineup>
 </craft>
 ```
 
