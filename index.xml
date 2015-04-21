@@ -1,8 +1,8 @@
 <craft>
     <parameter name="length" type="int" default="30"/>
     <group>
-        <!--Handle-->
         <script>
+            <!--Handle-->
             function main() {
                 var h;
                 
@@ -25,8 +25,8 @@
             }
         </script>
         
-        <!--Blade-->
         <script>
+            <!-- Blade -->
             function main() {
                 var head, diff, flatten;
                 
