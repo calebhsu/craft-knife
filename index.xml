@@ -1,4 +1,4 @@
-<craft>
+<craft name="knife">
     <parameter name="length" type="int" default="30"/>
     <group>
         <script>
