@@ -11,14 +11,12 @@ Parameterized knife model.
 ### Example
 ```html
 <craft>
-    <craft name="knife" module="calebhsu/craft-knife"/>
-    <lineup spacing = "2">
-        <scale factor="2">
-            <knife length="15"></knife>
-        </scale>
+    <craft name="knife" module="craft-knife"/>
+    <row spacing="2">
+        <knife length="15" transform="scale(2,2,2)"></knife>
         <knife length="20"></knife>
         <knife></knife>
-    </lineup>
+    </row>
 </craft>
 ```
 

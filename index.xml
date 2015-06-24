@@ -1,7 +1,7 @@
 <craft name="knife">
     <parameter name="length" type="int" default="30"/>
     
-    <column spacing="-1" align="x150 z50" color="silver">
+    <col spacing="-1" layout="lineupX(-3) centerZ()" color="silver">
         <script>
             function main() {
                 // Blade
@@ -44,8 +44,8 @@
                 
                 // parts
                 h = cylinder({
-                    r1: 1,
-                    r2: 2,
+                    r1: 2,
+                    r2: 1,
                     h: params.length,
                     fn: 6
                 }).scale([1, 0.4, 1]);
@@ -56,6 +56,6 @@
                 return h;
             }
         </script>
-    </column>  
+    </col>  
     
 </craft>
