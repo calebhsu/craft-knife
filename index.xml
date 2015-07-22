@@ -1,40 +1,14 @@
 <craft name="knife">
+    <style>
+        * { color: silver; }
+    </style>
+    
     <parameter name="length" type="int" default="30"/>
     
-    <col spacing="-1" layout="lineupX(-3) centerZ()" color="silver">
-        <script>
-            function main() {
-                // Blade
-                var head, diff, flatten;
-                
-                // parts
-                head = sphere(5).scale([1, 3, 0.2]);
-                
-                diff = cube({
-                    size: [10, 30, 5], 
-                    center: true
-                });
-                
-                flatten = cube({
-                    size: [10, 30, 3],
-                    center: true
-                });
-                
-                // transformations
-                diff = diff.translate([6, 0, 0]);
-                
-                head = difference(
-                    head, 
-                    diff, 
-                    flatten.translate([0, 0, 2]),
-                    flatten.translate([0, 0, -2])
-                );
-                
-                return head;
-            }
-        </script>
-        
-        <script>
+    <col spacing="-1" layout="lineupX(-3) centerZ()">
+        <sphere radius="5" t="scale(1 3 0.2) cropX(0% 40%) cropZ(28%               28%)"/>
+
+        <script type="text/openjscad">
             function main() {
                 // Handle
                 var h;

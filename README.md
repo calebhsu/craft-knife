@@ -2,8 +2,13 @@
 
 Parameterized knife model.
 
-### Install
-    $ npm install craft-knife
+### Usage
+```html
+<craft>
+    <craft name="knife" module="craft-knife"/>
+    <knife></knife>
+</craft>
+```
 
 ### Parameters
 - length: adjusts length of knife

@@ -1,6 +1,6 @@
 {
   "name": "craft-knife",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Parameterized Knife Model",
   "main": "index.js",
   "scripts": {
